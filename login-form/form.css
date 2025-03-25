@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ :root{
+
+    --accent-color: #007bff;
+    --base-color: #ffffff;
+    --text-color: #333333;
+    --input-color: #e3e3e3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Poppins;
+    font-size: 12px;
+    color: yellow;
+    text-align: center;
+}
+body{
+    min-height: 110vh;
+    background-image: url(pic.jpg);
+    background-position: right;
+    background-size: cover;
+    overflow: hidden;
+}
+.wrapper{
+    box-sizing: border-box; background-color: var (--base-color);
+    height: 100vh;
+    padding: 10px; 
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column; align-items: center; justify-content: center;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+form{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form label{
+    flex-shrink: 0;
+    height: 30px;
+    width: 60px;
+    background-color: var(--accent-color);
+    fill: var(--base-color);
+    border-radius: 10px 0 0  10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+form input{
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin-left: 0;
+    border: 2px solid;
+    border-left: none;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50x;
+    border-radius: 0 10px 10px 0;
+    font-weight: 600;
+    font-size: medium;
+}
+
+form input:hover{
+    border-color: var (--accent-color);
+}
+form input:focus{
+    outline: none;
+    border-color: var (--text-color);
+}
+div:has(input:focus) label{
+    background-color: var(--text-color);
+}
+
+form button {
+    background: linear-gradient(135deg, #007bff, #0056b3); 
+    color: white; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004099);
+    transform: scale(1.05); 
+}
+
+button:active {
+    transform: scale(0.98); 
+}
